@@ -14,6 +14,12 @@
 
 ---
 
+## Y U NO SUBMODULES?
+
+![](twitter-icon.png)
+
+---
+
 # Last year
 
 ![300%](2nd-meetup.png)
@@ -67,27 +73,129 @@
 
 ---
 
-Super short intro to CocoaPods 1
+# Core
+
+    spec = Pod::Specification.from_file('CPDColors.podspec')
+    puts spec.name
+    puts spec.version
+
+    $ ./core.rb 
+	CPDColors
+	0.1.0
+
+![](twitter-icon.png)
 
 ---
 
-Super short intro to CocoaPods 2
+# cocoapods-downloader
+
+	def download_head!
+		hg! %|clone #{url} #{@target_path.shellescape}| [...]
+	end 
+
+	def download_revision!
+		hg! %|clone "#{url}" --rev '#{options[:revision]}' #{@target_path [...]
+	end
+
+	def download_tag!
+		hg! %|clone "#{url}" --updaterev '#{options[:tag]}' #{@target_path [...]
+	end 
+
+![](twitter-icon.png)
 
 ---
 
-Super short intro to Ruby 1
+# Xcodeproj
+
+    wrkspace = Xcodeproj::Workspace.new_from_xcworkspace(
+    	'CPDColors/Example/Demo.xcworkspace')
+    puts wrkspace.schemes
+
+    $ ./xcodeproj.rb 
+    {"Demo"=>"/Users/boris/Projects/CPDColors/Example/Demo.xcodeproj", 
+     "Pods"=>"/Users/boris/Projects/CPDColors/Example/Pods/Pods.xcodeproj"}
+
+![](twitter-icon.png)
 
 ---
 
-Super short intro to Ruby 2
+# CocoaPods
+
+	$ pod install
+	Analyzing dependencies
+	Pre-downloading: `DBCamera` from `https://github.com/[...]`
+	Downloading dependencies
+	Installing ARASCIISwizzle (1.1.0)
+	Installing Bolts (1.1.0)
+	[...]
+	Generating Pods project
+	Integrating client project
+
+![](twitter-icon.png)
 
 ---
 
-Super short intro to Ruby 3
+# Ruby
+
+    $ irb
+
+- Interactive Ruby Shell
+
+![](ruby.jpg)
 
 ---
 
-Super short intro to Ruby 4
+# Ruby
+
+    irb(main):001:0> "Hello World"
+    => "Hello World"
+
+![](ruby.jpg)
+
+---
+
+# Ruby
+
+    irb(main):019:0> def h(name = "World")
+    irb(main):020:1> puts "Hello #{name.capitalize}!"
+    irb(main):021:1> end
+    => :h
+    irb(main):022:0> h "chris"
+    Hello Chris!
+
+![](ruby.jpg)
+
+---
+
+# ruby
+
+	irb(main):001:0> a
+	NameError: undefined local variable or method `a' for main:Object
+		from (irb):1
+		from /usr/bin/irb:12:in `<main>'
+	irb(main):002:0> a = b
+	NameError: undefined local variable or method `b' for main:Object
+		from (irb):2
+		from /usr/bin/irb:12:in `<main>'
+	irb(main):003:0> a = a
+	=> nil
+
+![](ruby.jpg)
+
+---
+
+# Learning more about Ruby
+
+- http://mislav.uniqpath.com/poignant-guide/
+- https://www.ruby-lang.org/en/documentation/quickstart/
+
+![](ruby.jpg)
+
+---
+
+# Please use the system ruby!
+
+![](ruby.jpg)
 
 ---
 
@@ -100,4 +208,8 @@ Super short intro to Ruby 4
 https://github.com/CocoaPods/Rainforest
 
 ![](twitter-icon.png)
+
+---
+
+![](senior-recruiter.png)
 
